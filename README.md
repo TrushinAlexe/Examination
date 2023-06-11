@@ -13,8 +13,36 @@
 
 # Решение:
 * Создали репозиторий <>.
-* Сделал блок-схему алгоритма:
-![Изображение](Путь к изображению).
+* Сделал блок-схему алгоритма и добавил ее комит плюс файл **Блоксхема**
 
 # Описание решения
 Сначало объявляется два массива: исходный и вторый такой же длины. Потом добавляем метод, в котором цикл соразмерный длине массива, внутри цикла проверка условия ( <=3 ), если да элемент первого массива заносится в count элемент второго массива. После присвоения увеличивается переменная count на 1 и возвращается к циклу for в котором i увеличивается на 1. И так проверяем до конца.
+
+# Решение
+```
+string[] array1 = new string[5] {"student", "geekbrains", "1995", "525", "res"};
+string[] array2 = new string[array1.Length];
+
+void SecondArray(string[] array1, string[] array2)
+{
+    int count = 0;
+    for (int i = 0; i < array1.Length; i++)
+    {
+    if(array1[i].Length <= 3)
+        {
+        array2[count] = array1[i];
+        count++;
+        }
+    }
+}
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
+}
+SecondArray(array1, array2);
+PrintArray(array2);
+```
